@@ -16,8 +16,10 @@
 
 **Клонирование репозитория**
 git clone https://github.com/marcelinelyy/filmmanager.git
+
 **Переход в рабочую директорию**
 cd filmmanager
+
 **Установка**
 python filmmanager.py
 

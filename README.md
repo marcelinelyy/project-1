@@ -15,8 +15,7 @@
 ## Установка и запуск
 
 **Клонирование репозитория**
-git clone https://github.com/marcelinelyy/filmmanager.git
-
+git clone https://github.com/marcelinelyy/project-1.git
 **Переход в рабочую директорию**
 cd filmmanager
 

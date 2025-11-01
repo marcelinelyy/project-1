@@ -22,7 +22,7 @@ def main():
             else:
                 print("\n Ваш список фильмов:")
                 for i, film in enumerate(films, 1):
-                    status = "✓" if film["seen"] else "✗"
+                    status = "П" if film["seen"] else "НП"
                     print(f"{i}. {film['title']} [{status}]")
                     
         elif choice == "3":
@@ -31,7 +31,7 @@ def main():
             else:
                 print("\n Какой фильм отметить просмотренным?")
                 for i, film in enumerate(films, 1):
-                    status = "✓" if film["seen"] else "✗"
+                    status = "П" if film["seen"] else "НП"
                     print(f"{i}. {film['title']} [{status}]")
                 
                 try:
@@ -50,7 +50,7 @@ def main():
             else:
                 print("\n Какой фильм отметить непросмотренным?")
                 for i, film in enumerate(films, 1):
-                    status = "✓" if film["seen"] else "✗"
+                    status = "П" if film["seen"] else "НП"
                     print(f"{i}. {film['title']} [{status}]")
                 
                 try:
@@ -69,7 +69,7 @@ def main():
             else:
                 print("\n Какой фильм удалить?")
                 for i, film in enumerate(films, 1):
-                    status = "✓" if film["seen"] else "✗"
+                    status = "П" if film["seen"] else "НП"
                     print(f"{i}. {film['title']} [{status}]")
                 
                 try:

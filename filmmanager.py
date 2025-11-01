@@ -1,89 +1,89 @@
-books = []
+films = []
 
 def main():
     while True:
-        print("\n1. Добавить книгу")
+        print("\n1. Добавить фильм")
         print("2. Показать список")
-        print("3. Отметить прочитанной")
-        print("4. Отметить непрочитанной")
-        print("5. Удалить книгу")
+        print("3. Отметить просмотренным")
+        print("4. Отметить непросмотренным")
+        print("5. Удалить фильм")
         print("6. Выйти")
         
         choice = input("Выберите: ")
         
         if choice == "1":
-            book = input("Название книги: ")
-            books.append({"title": book, "read": False})
-            print(f"Книга '{book}' добавлена!")
+            film = input("Название фильма: ")
+            films.append({"title": film, "seen": False})
+            print(f"Фильм '{film}' добавлен")
             
         elif choice == "2":
-            if not books:
-                print("Список книг пуст!")
+            if not films:
+                print("Список фильмов пуст")
             else:
-                print("\nВаш список книг:")
-                for i, book in enumerate(books, 1):
-                    status = "✓" if book["read"] else "✗"
-                    print(f"{i}. {book['title']} [{status}]")
+                print("\n Ваш список фильмов:")
+                for i, film in enumerate(films, 1):
+                    status = "✓" if film["seen"] else "✗"
+                    print(f"{i}. {film['title']} [{status}]")
                     
         elif choice == "3":
-            if not books:
-                print("Список книг пуст!")
+            if not films:
+                print("Список фильмов пуст")
             else:
-                print("\nКакую книгу отметить прочитанной?")
-                for i, book in enumerate(books, 1):
-                    status = "✓" if book["read"] else "✗"
-                    print(f"{i}. {book['title']} [{status}]")
+                print("\n Какой фильм отметить просмотренным?")
+                for i, film in enumerate(films, 1):
+                    status = "✓" if film["seen"] else "✗"
+                    print(f"{i}. {film['title']} [{status}]")
                 
                 try:
-                    book_num = int(input("Номер книги: ")) - 1
-                    if 0 <= book_num < len(books):
-                        books[book_num]["read"] = True
-                        print(f"Книга '{books[book_num]['title']}' отмечена как прочитанная!")
+                    film_num = int(input("Номер фильма: ")) - 1
+                    if 0 <= film_num < len(films):
+                        films[film_num]["seen"] = True
+                        print(f"Фильм '{films[film_num]['title']}' отмечен просмотренным")
                     else:
-                        print("Неверный номер книги!")
+                        print("Неверный номер фильма")
                 except ValueError:
-                    print("Пожалуйста, введите число!")
+                    print("Пожалуйста, введите число")
                     
         elif choice == "4":
-            if not books:
-                print("Список книг пуст!")
+            if not films:
+                print("Список фильмов пуст")
             else:
-                print("\nКакую книгу отметить непрочитанной?")
-                for i, book in enumerate(books, 1):
-                    status = "✓" if book["read"] else "✗"
-                    print(f"{i}. {book['title']} [{status}]")
+                print("\n Какой фильм отметить непросмотренным?")
+                for i, film in enumerate(films, 1):
+                    status = "✓" if film["seen"] else "✗"
+                    print(f"{i}. {film['title']} [{status}]")
                 
                 try:
-                    book_num = int(input("Номер книги: ")) - 1
-                    if 0 <= book_num < len(books):
-                        books[book_num]["read"] = False
-                        print(f"Книга '{books[book_num]['title']}' отмечена как непрочитанная!")
+                    film_num = int(input("Номер фильма: ")) - 1
+                    if 0 <= film_num < len(films):
+                        films[film_num]["seen"] = False
+                        print(f"Фильм '{films[film_num]['title']}' отмечен непросмотренным")
                     else:
-                        print("Неверный номер книги!")
+                        print("Неверный номер фильма")
                 except ValueError:
-                    print("Пожалуйста, введите число!")
+                    print("Пожалуйста, введите число")
                     
         elif choice == "5":
-            if not books:
-                print("Список книг пуст!")
+            if not films:
+                print("Список фильмов пуст")
             else:
-                print("\nКакую книгу удалить?")
-                for i, book in enumerate(books, 1):
-                    status = "✓" if book["read"] else "✗"
-                    print(f"{i}. {book['title']} [{status}]")
+                print("\n Какой фильм удалить?")
+                for i, film in enumerate(films, 1):
+                    status = "✓" if film["seen"] else "✗"
+                    print(f"{i}. {film['title']} [{status}]")
                 
                 try:
-                    book_num = int(input("Номер книги: ")) - 1
-                    if 0 <= book_num < len(books):
-                        removed_book = books.pop(book_num)
-                        print(f"Книга '{removed_book['title']}' удалена!")
+                    film_num = int(input("Номер фильма: ")) - 1
+                    if 0 <= film_num < len(films):
+                        removed_film = films.pop(film_num)
+                        print(f"Фильм '{removed_film['title']}' удален")
                     else:
-                        print("Неверный номер книги!")
+                        print("Неверный номер фильма")
                 except ValueError:
-                    print("Пожалуйста, введите число!")
+                    print("Пожалуйста, введите число")
                     
         elif choice == "6":
-            print("До свидания!")
+            print("До свидания")
             break
             
         else:

@@ -1,8 +1,8 @@
- __pycache__/
- *.pyc
- *.pyo
- .pytest_cache/
- DS_Store
- .Thumbs.db
- .idea/
- .vscode/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+DS_Store
+.Thumbs.db
+.idea/
+.vscode/
